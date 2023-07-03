@@ -1,0 +1,19 @@
+version: '3.1'
+
+services:    
+  maria_db:
+    image: mariadb:10.11
+    restart: on-failure:2
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: secret
+      MYSQL_DATABASE: goodnews
+      MYSQL_USER: example
+      MYSQL_PASSWORD: secret2
+
+  adminer:
+    image: adminer
+    restart: on-failure:2
+    ports:
+      - 8081:8080
