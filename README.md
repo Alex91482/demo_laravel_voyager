@@ -1,29 +1,29 @@
-##Application
+## Application
 1. Если в админке вместо изображений ошибки - нужно зайти в файл env и указать корректный адрес:порт
 2. Для корректной корректировки записей в бд нужно добавить таблицу в bread
 3. Требуется настройка добавляемых таблиц в voyager иначе будет падать на записях содержащих формат Date
 
-#Link
+# Link
 Адрес сайта:                http://localhost:8000/
 Панель администратора:      http://localhost:8000/admin
 Конфигурвтор бд (aminer):   http://localhost:8081/ 
 
-##PHP
+## PHP
 php artisan voyager:install --with-dummy    - установка дефолтных таблиц для voyager
 php artisan storage:link
 php artisan serve
 
-##Docker
-###Cmd mysql 
+## Docker
+### Cmd mysql 
 mysql -V
 mysql -u example -p
 
-##Voyager
-###Default user
+## Voyager
+### Default user
 email: admin@admin.com
 password: password
 
-##SQL
+## SQL
 ALTER DATABASE goodnews charset=utf8;
 
 CREATE TABLE goodnews.articles (
