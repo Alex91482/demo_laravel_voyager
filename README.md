@@ -3,27 +3,27 @@
 2. Для корректной корректировки записей в бд нужно добавить таблицу в bread
 3. Требуется настройка добавляемых таблиц в voyager иначе будет падать на записях содержащих формат Date
 
-# Link
-Адрес сайта:                http://localhost:8000/
-Панель администратора:      http://localhost:8000/admin
-Конфигурвтор бд (aminer):   http://localhost:8081/ 
+## Link
+ Адрес сайта:                http://localhost:8000/
+ Панель администратора:      http://localhost:8000/admin
+ Конфигуратор бд (aminer):   http://localhost:8081/ 
 
 ## PHP
-php artisan voyager:install --with-dummy    - установка дефолтных таблиц для voyager
-php artisan storage:link
-php artisan serve
+ php artisan voyager:install --with-dummy    - установка дефолтных таблиц для voyager
+ php artisan storage:link
+ php artisan serve
 
-## Docker
-### Cmd mysql 
+## Cmd mysql 
 mysql -V
 mysql -u example -p
 
 ## Voyager
 ### Default user
-email: admin@admin.com
-password: password
+ email: admin@admin.com
+ password: password
 
 ## SQL
+```sql
 ALTER DATABASE goodnews charset=utf8;
 
 CREATE TABLE goodnews.articles (
@@ -50,3 +50,4 @@ VALUES ('2023-01-01', 'This is header', 'Article ... .', null, 'test_img1.png');
 
 INSERT INTO goodnews.journal (date_of_wirting, journal_title, journal_description, autors, links, images) 
 VALUES ('2023-01-01','This is header','Short description','Autor', null, 'test_img2.png');
+```
